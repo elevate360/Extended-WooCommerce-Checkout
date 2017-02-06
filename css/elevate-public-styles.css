@@ -1,0 +1,203 @@
+/*
+ * Elevate Brick Donation Public Styles
+ * Front facing styles used to adjust woocommerce
+ */
+
+
+/*Cart Adjustments*/
+.woocommerce .woocommerce-checkout{
+}
+.woocommerce .woocommerce-checkout #customer_details .col-1{
+	width: 100%;
+	margin: 0% 0% 2.5% 0%;
+}
+.woocommerce .woocommerce-checkout #customer_details .col-2{
+	width: 100%;
+	margin: 0% 0% 2.5% 0%;
+}
+.woocommerce .woocommerce-checkout h3{
+	color: #4c2c6d;
+	font-weight: bold;
+}
+.woocommerce .create-account{
+	display: none!important;
+}
+
+/*Fields*/
+.woocommerce .woocommerce-checkout input[type=text], 
+.woocommerce .woocommerce-checkout input[type=password], 
+.woocommerce .woocommerce-checkout input[type=tel], 
+.woocommerce .woocommerce-checkout input[type=email], 
+.woocommerce .woocommerce-checkout input.text, 
+.woocommerce .woocommerce-checkout input.title, 
+.woocommerce .woocommerce-checkout textarea, 
+.woocommerce .woocommerce-checkout select{
+	background: #f1f0f6;
+	border: solid 1px #e2e1e6;
+	padding: 8px;
+	min-height: 40px;
+}
+.woocommerce .woocommerce-checkout .select2-container .select2-choice{
+	background: #f1f0f6;
+	border: solid 1px #e2e1e6;
+}
+
+.woocommerce .woocommerce-checkout .place-order{
+	text-align: center;
+}
+.woocommerce .woocommerce-checkout #payment{
+	
+}
+.woocommerce .woocommerce-checkout #payment #place_order{
+	border: 0px;
+    background: #fbd908;
+    color: #333;
+    display: inline-block;
+    float: none;
+    border-bottom: solid 2px #dabd0c;
+}
+.woocommerce .woocommerce-checkout #payment #place_order:focus,
+.woocommerce .woocommerce-checkout #payment #place_order:hover,
+.woocommerce .woocommerce-checkout #payment #place_order:active{
+	background: #dabd0c;
+    border-bottom: solid 2px #b9a10b;
+}
+
+/*adjustmnets for the 'state' selector*/
+a.select2-choice{
+	padding: 8px 15px!important;
+}
+
+/*House Animation Styles*/
+#el-wrap.el-wrap{
+	position: relative;
+	background: #edeff9;
+	opacity: 0;
+	transition: all 500ms linear;
+	width: 100%;
+}
+#el-wrap.active{
+	opacity: 1;
+}
+#el-wrap.el-wrap.full{
+	max-width: 50%;
+}
+/*house animation*/
+#el-wrap .el-anim-house{
+	position: relative;
+	width: 50%;
+	max-width: 600px;
+	height: auto;
+	margin: auto;
+}
+#el-wrap .el-anim-house .el-house{
+	display: block!important;
+	width: 100%;
+}
+#el-wrap .el-anim-house .el-frame{
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+#el-wrap .el-anim-house .el-brick{
+	position: absolute;
+	width: 17%;
+	top: -30px;
+	opacity: 0;
+}
+#el-wrap .el-anim-house .el-brick.one{
+	left: 27%;
+	transition: top 500ms linear 1500ms, opacity 250ms linear 1500ms;
+}
+#el-wrap .el-anim-house .el-brick.two{
+	left: 44%;
+	transition: top 500ms linear 2000ms, opacity 250ms linear 2000ms;
+}
+#el-wrap .el-anim-house .el-brick.three{
+	left: 61%;
+	transition: top 500ms linear 2500ms, opacity 250ms linear 2500ms;
+}
+
+
+
+/*grass*/
+#el-wrap .el-anim-grass{
+	background: #c9eada;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 10%;
+}
+
+/*signs / clouds*/
+#el-wrap .el-anim-sign-left,
+#el-wrap .el-anim-sign-right,
+#el-wrap .el-anim-cloud-left,
+#el-wrap .el-anim-cloud-right{
+	-webkit-transition: all 300ms linear;
+	-moz-transition: all 300ms linear;
+	-o-transition: all 300ms linear;
+	transition: all 300ms linear;
+}
+
+
+/*left sign*/
+#el-wrap .el-anim-sign-left{
+    position: absolute;
+    bottom: 6%;
+    left: 20%;
+    width: 20%;
+    max-width: 250px;
+}
+/*right sign*/
+#el-wrap .el-anim-sign-right{
+    position: absolute;
+    bottom: 2%;
+    right: 20%;
+    width: 20%;
+    max-width: 250px;
+}
+
+/*left cloud*/
+#el-wrap .el-anim-cloud-left{
+	position: absolute;
+	width: 30%;
+	max-width: 350px;
+	top: 2.5%;
+	left: 5%;
+}
+#el-wrap .el-anim-cloud-right{
+	position: absolute;
+	width: 30%;
+	max-width: 275px;
+	top: 7.5%;
+	right: 5%;
+}
+
+/*trigger only on the 'thankyou' version of the animation*/
+#el-wrap.thankyou.active .el-brick{
+	top: 56%;
+	opacity: 1;
+}
+
+
+
+
+/*Slight adjustmnets for mobile browsers*/
+@media all and (max-width: 678px){
+	body{
+		
+	}
+	#el-wrap  .el-anim-sign-left{
+		width: 30%;
+	    left: 5%;
+	    bottom: 0%;
+	}
+	#el-wrap  .el-anim-sign-right{
+		right: 5%;
+		bottom: 0%;
+		width: 30%;
+	}
+	
+}
+
